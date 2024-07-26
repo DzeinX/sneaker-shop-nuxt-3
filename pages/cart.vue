@@ -11,7 +11,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
@@ -72,7 +71,7 @@ const address = ref("г.Вологда, ул.Ленина, д.54, кв.6")
             <Card class="grid sm:grid-cols-2 grid-cols-1">
               <CardHeader>
                 <NuxtLink :to="{ name: 'sneaker-article', params: {article: sneaker.entity.article} }">
-                  <NuxtImg :src="`/images/${sneaker.entity.imgUrls[0]}`" class="object-cover object-center h-40 w-full"/>
+                  <NuxtImg alt="" :src="`/images/${sneaker.entity.imgUrls[0]}`" class="object-cover object-center h-40 w-full"/>
                 </NuxtLink>
               </CardHeader>
               <CardContent class="py-5 pr-10">
@@ -125,7 +124,3 @@ const address = ref("г.Вологда, ул.Ленина, д.54, кв.6")
     </ClientOnly>
   </div>
 </template>
-
-<style scoped>
-
-</style>

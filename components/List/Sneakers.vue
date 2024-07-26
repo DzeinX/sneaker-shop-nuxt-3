@@ -26,7 +26,7 @@ const {sneakers} = defineProps({
         >
           <Card>
             <CardHeader class="relative">
-              <NuxtImg :src="'/images/' + sneaker.imgUrls[0]" class="object-cover object-center h-60"/>
+              <NuxtImg alt="" :src="'/images/' + sneaker.imgUrls[0]" loading="lazy" class="object-cover object-center h-60"/>
               <span
                   title="Новинка"
                   class="absolute top-2 left-4 flex items-center gap-x-2 h-[40px]"
