@@ -94,7 +94,7 @@ watchOnce(emblaMainApi, (emblaMainApi) => {
             <Carousel :opts="{ loop: true }" @init-api="(val) => emblaMainApi = val">
               <CarouselContent>
                 <CarouselItem v-for="url of sneaker?.imgUrls" :key="url">
-                  <NuxtImg :src="`/${url}`" class="object-cover object-center h-96 w-full"/>
+                  <NuxtImg :src="`/images/${url}`" class="object-cover object-center h-96 w-full"/>
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious/>
@@ -106,7 +106,7 @@ watchOnce(emblaMainApi, (emblaMainApi) => {
                               v-for="(url, index) of sneaker?.imgUrls" :key="index">
                   <Card :class="index === selectedIndex ? '' : 'opacity-50'">
                     <CardHeader class="p-2 hover:translate-y-0">
-                      <NuxtImg :src="`/${url}`" class="object-cover object-center h-10 w-full"/>
+                      <NuxtImg :src="`/images/${url}`" class="object-cover object-center h-10 w-full"/>
                     </CardHeader>
                   </Card>
                 </CarouselItem>

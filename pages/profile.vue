@@ -132,7 +132,7 @@ const dataBar = [
                 <Card class="grid lg:grid-cols-2 grid-cols-1">
                   <CardHeader>
                     <NuxtLink :to="{ name: 'sneaker-article', params: {article: sneaker.entity.article} }">
-                      <NuxtImg :src="`/${sneaker.entity.imgUrls[0]}`" class="object-cover object-center h-40 w-full"/>
+                      <NuxtImg :src="`/images/${sneaker.entity.imgUrls[0]}`" class="object-cover object-center h-40 w-full"/>
                     </NuxtLink>
                   </CardHeader>
                   <CardContent class="py-5 pr-10">
