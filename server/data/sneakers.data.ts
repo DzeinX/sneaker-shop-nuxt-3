@@ -1,0 +1,122 @@
+import {female, IGender, male} from "~/server/data/gender.data"
+import {asics, ICompany, jordan, nike, puma, reebok} from "~/server/data/company.data";
+
+export interface ISize {
+  size: number,
+    amount: number,
+}
+
+export interface ISneaker {
+  id: number,
+  company: ICompany,
+  model: string,
+  price: number,
+  imgUrls: string[],
+  description: string,
+  sizes: ISize[],
+  article: string,
+  gender: IGender,
+  country: string,
+  isNew: boolean,
+  isPopular: boolean,
+}
+
+export const sneakers: ISneaker[] = [
+  {
+    id: 1,
+    company: jordan,
+    model: "1 Mid SE",
+    price: 23190,
+    imgUrls: ["/1-1.jpg", "/1-2.jpg"],
+    description: "Мужские кроссовки Air Jordan 1 Mid SE в контрастной расцветке «Vivid Orange». Верх этой модели сделан из искусственной кожи насыщенно черного и ярко-оранжевого цветов, а также дополнен ярко-красной окантовкой основных деталей. Откройте раздел Jordan на сайте sneakerhead.ru, чтобы найти другие кроссовки для баскетбола и прогулок по городу.",
+    sizes: [
+      {size: 41, amount: 4},
+      {size: 42, amount: 5}
+    ],
+    article: "FJ4923-008",
+    gender: male,
+    country: "Вьетнам",
+    isNew: true,
+    isPopular: true,
+  },
+  {
+    id: 2,
+    company: asics,
+    model: "GEL-NIMBUS 9",
+    price: 18490,
+    imgUrls: ["/2-1.jpg", "/2-2.jpg"],
+    description: "Кроссовки ASICS GEL-NIMBUS 9 — футуристическая пара с сильным влиянием эпохи 2000-х, которая привлечет внимание окружающих. Её верх сделан из дыщащей сетки, обеспечивающей комфорт даже во время интенсивного бега, а также дополнен прочными укрепляющими вставками. Мягкий бортик кроссовок гарантирует комфортную посадку, а а технология Gel — идеальную амортизацию, обеспечивая удобство на протяжении всего дня. Откройте раздел ASICS на официальном сайте sneakerhead.ru, чтобы найти другие кроссовки на каждый день в различных цветовых решениях.",
+    sizes: [
+      {size: 39.5, amount: 1},
+      {size: 40.5, amount: 0},
+      {size: 41.5, amount: 2}
+    ],
+    article: "1201A424-023",
+    gender: male,
+    country: "Индонезия",
+    isNew: true,
+    isPopular: false,
+  },
+  {
+    id: 3,
+    company: nike,
+    model: "Air Force 1 '07 Fresh",
+    price: 22990,
+    imgUrls: ["/3-1.jpg", "/3-2.jpg", "/3-3.jpg"],
+    description: "Кроссовки Nike Air Force 1 '07 Fresh в монохромной белой расцветке созданы для тех, кто ценит первозданный вид новой пары. Верх модели сделан из натуральной кожи, мягкая фактура которой устойчива к появлению заломов. А ещё её гораздо легче чистить, приводя к изначальному белому цвету. Задник, кстати, также декорирован с учётом простоты в уходе — логотип бренда выполнен тиснением, а не вышивкой. Откройте раздел Nike на официальном сайте sneakerhead.ru, чтобы найти другие удобные кроссовки на каждый день.",
+    sizes: [
+      {size: 40, amount: 3},
+    ],
+    article: "DM0211-002",
+    gender: male,
+    country: "Вьетнам",
+    isNew: false,
+    isPopular: true,
+  },
+  {
+    id: 4,
+    company: reebok,
+    model: "Zig Kinetica 2.5 Edge",
+    price: 15990,
+    imgUrls: ["/4-1.jpg", "/4-2.jpg", "/4-3.jpg", "/4-4.jpg"],
+    description: "Кроссовки Reebok  Zig Kinetica 2.5 Edge — износостойкая пара, которой не страшны даже самые сложные участки маршрута. Её многослойный верх сделан из прочного нейлона Cordura, который устойчив ко внешним воздействиям, а также оснащен вставками из натуральной и искусственной кожи. Кроссовки дополнены подкладом из текстиля для комфортной посадки, а подошва Floatride Fuel со вставкой Floatride Energy гарантирует комфорт на протяжении всего дня. Откройте раздел Reebok на официальном сайте магазина sneakerhead.ru, чтобы найти больше удобной обуви для любого случая жизни.",
+    sizes: [
+      {size: 38, amount: 5},
+      {size: 39.5, amount: 3},
+      {size: 40, amount: 5},
+      {size: 41, amount: 6},
+      {size: 41.5, amount: 1},
+      {size: 42, amount: 3},
+      {size: 43, amount: 4},
+      {size: 43.5, amount: 1},
+      {size: 44, amount: 5},
+      {size: 46, amount: 8},
+    ],
+    article: "100074674",
+    gender: male,
+    country: "Вьетнам",
+    isNew: true,
+    isPopular: false,
+  },
+  {
+    id: 5,
+    company: puma,
+    model: "180 PRM Wns",
+    price: 12990,
+    imgUrls: ["/5-1.jpg", "/5-2.jpg", "/5-3.jpg", "/5-4.jpg"],
+    description: "Кроссовки PUMA 180 PRM — настоящая находка для тех, кто ищет удобную обувь для скейтбординга и прогулок по городу. Их верх порадует вас приятной комбинацией материалов, где ворсистая замша дополнена натуральной кожей. А благодаря мягкому бортику кроссовки обеспечат идеальную посадку и защитят от возможных травм на скейте. Откройте раздел Puma на официальном сайте sneakerhead.ru, чтобы найти другие удобные кроссовки на каждый день.",
+    sizes: [
+      {size: 35, amount: 4},
+      {size: 36, amount: 5},
+      {size: 46.5, amount: 24},
+      {size: 47, amount: 1},
+      {size: 47.5, amount: 4},
+      {size: 48, amount: 3},
+    ],
+    article: "39376405",
+    gender: female,
+    country: "Китай",
+    isNew: false,
+    isPopular: false,
+  },
+]
