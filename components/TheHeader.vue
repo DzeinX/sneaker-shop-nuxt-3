@@ -27,9 +27,9 @@ const isSearchOpen = ref(false)
             :class="'h-[30px] transition-all ' + (isSearchOpen ? 'w-52 opacity-100' : 'w-0 opacity-0 -mr-5')"
         />
       </div>
-      <div title="Меню" class="md:hidden flex justify-between items-center cursor-pointer">
-        <Icon name="ep:menu" size="35"/>
-      </div>
+<!--      <div title="Меню" class="md:hidden flex justify-between items-center cursor-pointer">-->
+<!--        <Icon name="ep:menu" size="35"/>-->
+<!--      </div>-->
       <NuxtLink to="/cart" title="Корзина" class="flex items-center hover:opacity-60 transition-opacity">
         <Icon name="mdi:cart-outline" color="#aaa" size="35"/>
       </NuxtLink>
